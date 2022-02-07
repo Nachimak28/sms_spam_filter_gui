@@ -1,0 +1,3 @@
+prototype.py
+*.pyc
+*__pycache__
