@@ -5,6 +5,8 @@ import string
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
+from helper.constant import spam_sms_database
+
 
 def categorize_words():
     '''
@@ -52,7 +54,9 @@ def pre_process(sms):
     remove_stop_words = [word for word in tokenize if word not in nltk.corpus.stopwords.words('english')]
     return remove_stop_words
 
-data = pd.read_csv('SMSSpamCollection.txt', sep = '\t', header=None, names=["label", "sms"])
+
+data = pd.json_normalize(spam_sms_database)
+# data = pd.read_csv('SMSSpamCollection.txt', sep = '\t', header=None, names=["label", "sms"])
 data['processed'] = data['sms'].apply(lambda x: pre_process(x))
 
 #creating lists to store spam/non-spam associated words and their instances

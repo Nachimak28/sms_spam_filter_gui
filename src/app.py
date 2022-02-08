@@ -2,7 +2,7 @@ import dearpygui.dearpygui as dpg
 import string
 import nltk
 
-from functions import categorize_words, pre_process, predict
+from helper.functions import categorize_words, pre_process, predict
 nltk.download('punkt')
 nltk.download('stopwords')
 
