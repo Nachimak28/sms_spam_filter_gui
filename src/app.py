@@ -40,7 +40,7 @@ def check_spam(sender, data, pred=[]):
 dpg.create_context()
 
 # loading the logo image
-width, height, channels, data = dpg.load_image("logo_spamFilter.png")
+width, height, channels, data = dpg.load_image("assets/logo_spamFilter.png")
 
 # added tag to help identify this is the primary window
 with dpg.window(label="Simple SMS Spam Filter", tag="Primary Window"):
