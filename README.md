@@ -2,11 +2,13 @@
 
 
 This app is a simple spam filter app built using NLTK for the NLP functions and DearPyGUI for the GUI (obviously!).
-It is a replication of the app build in [this](https://www.youtube.com/watch?v=2RocXKPPx4o) video .
+It is a replication of the app build in [this](https://www.youtube.com/watch?v=2RocXKPPx4o) video.
 
 Unfortunately, the [original codebase](https://github.com/MariyaSha/SimpleSMSspamFilter_GUI) was built using an older version of the dearpygui app, hence I've replicated the app with the newest API of DearPyGUI.
 
-## Steps to run the app
+
+
+## Steps to run the app locally
 
 Clone this repository
 ```
