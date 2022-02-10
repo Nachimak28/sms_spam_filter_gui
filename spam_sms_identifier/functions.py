@@ -5,7 +5,8 @@ import string
 import nltk
 nltk.download('punkt')
 nltk.download('stopwords')
-from helper.constant import spam_sms_database
+# from spam_sms_identifier.constant import spam_sms_database
+from constant import spam_sms_database
 
 
 def categorize_words():
