@@ -25,9 +25,9 @@ Install the dependencies - preferrably in conda or vitrual env
 pip install -r requirements.txt
 ```
 
-Change directory into src folder
+Change directory into spam_sms_identifier folder
 ```
-cd src
+cd spam_sms_identifier
 ```
 
 Run the code
