@@ -25,9 +25,9 @@ Install the dependencies - preferrably in conda or vitrual env
 pip install -r requirements.txt
 ```
 
-Change directory into src folder
+Change directory into spam_sms_identifier folder
 ```
-cd src
+cd spam_sms_identifier
 ```
 
 Run the code
@@ -36,3 +36,56 @@ python app.py
 ```
 
 Feel free to create issues if you face any problems running the app.
+
+## Converting to EXE
+
+Warning: Does not work as expected
+
+### Method 1
+
+* Using py2exe
+
+Install py2exe
+```sh
+pip install py2exe
+```
+
+Change directory into the spam_sms_identifier
+```
+cd spam_sms_identifier
+```
+
+Run the following command
+```sh
+python setup.py install
+```
+This should create a dist folder and we can find the app.exe in this folder which can bew distributed along with the dist folder. Not as a single file 
+
+* Problems faced with py2exe: 
+    - Even with the right configuration, including necessary packages, files, assets and the python interpreter config, it does not produce a single independently installable EXE to distribute
+
+
+### Method 2
+
+* Using pyinstaller
+
+Install pyinstaller
+```sh
+pip install pyinstaller
+```
+
+Change directory into the spam_sms_identifier
+```
+cd spam_sms_identifier
+```
+
+Run the following command
+```sh
+pyinstaller --onefile app.py
+```
+
+This produces a build and dist folder where in the dist folder, one could find the exe. 
+It does bundle up the whole codebase into a single EXE. 
+
+* Problems faced with pyinstaller: 
+    - All right configuration, including necessary packages, files, assets and the python interpreter config, there are some problems with loading of assest like images. I simply ran out of time and patience to search and solve this problem even after a lot of effort. Might come back to this later if felt necessary. 
